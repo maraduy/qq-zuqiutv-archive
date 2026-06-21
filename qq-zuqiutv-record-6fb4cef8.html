@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>足球直播 · 站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f8f6f0;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #2c2b28;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fefcf8;
+      border-radius: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.03);
+      padding: 2.5rem 2rem;
+    }
+
+    @media (max-width: 540px) {
+      .page {
+        padding: 1.8rem 1.2rem;
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #3d3a35;
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #7a756e;
+      border-left: 3px solid #c8b89a;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+      font-style: normal;
+    }
+
+    .hero-summary {
+      background: #f3efe8;
+      border-radius: 16px;
+      padding: 1.5rem 1.8rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .hero-summary p {
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-summary p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #3d3a35;
+      margin: 2.2rem 0 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .section-title::before {
+      content: "—";
+      color: #c8b89a;
+      font-weight: 300;
+      margin-right: 0.2rem;
+    }
+
+    .highlight-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.2rem 0 1.8rem 0;
+    }
+
+    .highlight-item {
+      flex: 1 1 180px;
+      background: #f8f5ef;
+      border-radius: 14px;
+      padding: 1rem 1.2rem;
+      border-left: 4px solid #b8a484;
+    }
+
+    .highlight-item strong {
+      display: block;
+      font-weight: 600;
+      color: #4f4a42;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .highlight-item span {
+      font-size: 0.95rem;
+      color: #5f5950;
+    }
+
+    .card-tip {
+      background: #f0ebe2;
+      border-radius: 14px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.8rem 0;
+      border: 1px solid #e2d9cc;
+      position: relative;
+    }
+
+    .card-tip::before {
+      content: "📌 使用建议";
+      display: block;
+      font-weight: 500;
+      color: #4f4a42;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+    }
+
+    .card-tip p {
+      font-size: 0.98rem;
+      color: #4f4a42;
+    }
+
+    .card-tip ul {
+      margin: 0.4rem 0 0 1.2rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .card-tip ul li {
+      position: relative;
+      padding-left: 1.2rem;
+      margin-bottom: 0.3rem;
+      font-size: 0.96rem;
+    }
+
+    .card-tip ul li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: #8f7d64;
+      font-weight: bold;
+    }
+
+    .faq-mini {
+      margin: 2rem 0 1.5rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ece6db;
+      padding: 0.8rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #4f4a42;
+      font-size: 1rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-a {
+      font-size: 0.95rem;
+      color: #6b655c;
+    }
+
+    .notice-box {
+      background: #faf7f1;
+      border: 1px dashed #d4cbbc;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      margin-top: 1.8rem;
+      font-size: 0.9rem;
+      color: #6b655c;
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+
+    .notice-box::before {
+      content: "ℹ️";
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .text-link {
+      color: #8a7050;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #c8b89a;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .text-link:hover {
+      color: #5f4a30;
+      text-decoration-color: #5f4a30;
+    }
+
+    .footer-meta {
+      margin-top: 2.8rem;
+      border-top: 1px solid #ece6db;
+      padding-top: 1.2rem;
+      font-size: 0.85rem;
+      color: #999288;
+      text-align: center;
+    }
+
+    .footer-meta a {
+      color: #8a7050;
+      text-decoration: none;
+    }
+
+    .footer-meta a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <h1>把比赛搬进日常</h1>
+  <div class="subhead">关于足球直播 · 一个安静的站点介绍</div>
+
+  <div class="hero-summary">
+    <p><strong>足球直播</strong> 是一个专注于赛事信息聚合的站点，帮你在各种屏幕前快速找到正在进行的比赛。这里不生产信号，而是整理公开的直播线索，让你少翻几页、多看几眼。</p>
+    <p>如果你和我一样，偶尔想打开一场比赛，又不想被复杂的菜单劝退，那么这里或许能成为你的一个小起点。</p>
+  </div>
+
+  <!-- 亮点 -->
+  <div class="section-title">站点特点</div>
+  <div class="highlight-grid">
+    <div class="highlight-item">
+      <strong>直播聚合</strong>
+      <span>汇集多个来源的足球赛事，减少反复搜索的麻烦。</span>
+    </div>
+    <div class="highlight-item">
+      <strong>简洁列表</strong>
+      <span>页面以列表和简单分类为主，没有花哨的弹窗干扰。</span>
+    </div>
+    <div class="highlight-item">
+      <strong>多联赛覆盖</strong>
+      <span>从五大联赛到热门杯赛，各类赛事信息尽量收录。</span>
+    </div>
+  </div>
+
+  <!-- 使用建议 引用块风格 -->
+  <div class="card-tip">
+    <p>如果你第一次来，可以试试这样用：</p>
+    <ul>
+      <li>打开首页后，先看看 <a href="https://qq-zuqiutv.com" class="text-link">足球直播</a> 当前列出的比赛是否匹配你想追的场次。</li>
+      <li>大部分比赛会显示开赛时间和可能的观看方式，留意页面上的文字提示就好。</li>
+      <li>因为站点依赖多个外部数据源，偶尔可能出现信息更新延迟，稍等片刻再刷新通常会恢复正常。</li>
+    </ul>
+  </div>
+
+  <!-- 可信但克制的说明 -->
+  <div class="section-title">一些坦诚的说明</div>
+  <p style="margin-bottom: 0.8rem; color: #4f4a42;">
+    这个站点本身不托管任何视频流，也不提供付费订阅。所有指向比赛的链接均来自公开网络，站内仅做整理和展示。如果你在使用过程中发现链接失效或内容异常，那多半是源站调整所致，和本地的咖啡机一样，偶尔也需要重启一下心情。
+  </p>
+  <p style="color: #5f5950;">
+    另外，由于版权和地区限制，部分比赛可能无法直接观看，但这并不妨碍你把它当作一个赛程提醒工具来用。毕竟，知道几点开球，有时候比直接看全场更重要。
+  </p>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-mini">
+    <div class="section-title">常见疑问（简短版）</div>
+    <div class="faq-item">
+      <div class="faq-q">需要注册或付费吗？</div>
+      <div class="faq-a">完全不需要。站点免费公开，无需登录即可浏览赛事列表。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">为什么有些比赛打不开？</div>
+      <div class="faq-a">站内的链接指向第三方直播源，有时效性和地域限制，换一个场次或换个时段再试通常就好。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">手机上看体验如何？</div>
+      <div class="faq-a">页面针对移动端做了基础适配，竖屏浏览时列表会自适应，大体够用。</div>
+    </div>
+  </div>
+
+  <!-- 提示框 -->
+  <div class="notice-box">
+    <div>
+      如果你正在找一场具体的比赛，不妨直接去 <a href="https://qq-zuqiutv.com" class="text-link">足球直播</a> 首页扫一眼，大部分热门场次都在第一屏。周末的晚上，泡杯茶，打开页面，剩下的交给赛程。
+    </div>
+  </div>
+
+  <div class="footer-meta">
+    <span>一个不起眼的足球直播信息站 · 每天更新</span><br>
+    <span style="font-size: 0.75rem; color: #b0a89a;">—— 保持简单，保持开放 ——</span>
+  </div>
+</div>
+</body>
+</html>
