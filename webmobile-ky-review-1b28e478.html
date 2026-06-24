@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开云 · 聚焦移动端使用场景</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafaf8;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1e1e;
+            line-height: 1.6;
+            padding: 0 1.2rem;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3.6rem 0 2.4rem;
+        }
+
+        /* hero */
+        .hero {
+            margin-bottom: 3.2rem;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 550;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+            color: #1c1c1a;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: #4a4a47;
+            max-width: 600px;
+        }
+
+        /* 分隔标题 */
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #868680;
+            margin: 2.4rem 0 1rem 0;
+            border-bottom: 1px solid #e2e2dd;
+            padding-bottom: 0.3rem;
+        }
+
+        /* 优势卡片 */
+        .advantage-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            margin-bottom: 2.8rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.6rem 1.8rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.02);
+            transition: all 0.15s ease;
+            border: 1px solid #ecece8;
+        }
+        .card h3 {
+            font-weight: 550;
+            font-size: 1.25rem;
+            margin-bottom: 0.4rem;
+            color: #1e1e1a;
+        }
+        .card p {
+            color: #4c4c48;
+            font-size: 0.98rem;
+        }
+
+        /* 说明区 / 场景 */
+        .scene-text {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.6rem 1.8rem;
+            margin-bottom: 2.8rem;
+            border: 1px solid #ecece8;
+        }
+        .scene-text p {
+            margin-bottom: 0.9rem;
+            color: #2e2e2b;
+        }
+        .scene-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 2.8rem;
+        }
+        .faq-item {
+            border-left: 3px solid #d4d4cf;
+            padding-left: 1rem;
+        }
+        .faq-item .q {
+            font-weight: 500;
+            color: #1f1f1c;
+            margin-bottom: 0.2rem;
+        }
+        .faq-item .a {
+            color: #5a5a55;
+            font-size: 0.95rem;
+        }
+
+        /* 底部链接 */
+        .footer-links {
+            border-top: 1px solid #e2e2dd;
+            padding-top: 1.8rem;
+            margin-top: 1.2rem;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #6f6f6a;
+        }
+        .footer-links a {
+            color: #1e1e1e;
+            text-decoration: none;
+            border-bottom: 1px solid #c2c2bc;
+            transition: border-color 0.2s;
+        }
+        .footer-links a:hover {
+            border-bottom-color: #1e1e1e;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            .page {
+                padding: 2rem 0 1.6rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .card, .scene-text {
+                padding: 1.2rem 1.2rem;
+            }
+            .section-title {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- hero 区 -->
+        <div class="hero">
+            <h1>开云 · 移动端场景的起点</h1>
+            <p>不用花时间猜网站做什么，这里直接告诉你：围绕移动设备的使用习惯，提供轻量、聚焦的信息与工具指引。</p>
+        </div>
+
+        <!-- 优势区：三个卡片 -->
+        <div class="section-title">为什么值得留意</div>
+        <div class="advantage-grid">
+            <div class="card">
+                <h3>专为小屏优化</h3>
+                <p>无论你在手机还是平板浏览，页面内容都经过适配，没有多余缩放或横向滚动，信息层级清楚。</p>
+            </div>
+            <div class="card">
+                <h3>不囤积，每页有重点</h3>
+                <p>每个页面只讲一个核心主题，不堆砌无关模块，适合想快速获取或判断的用户。</p>
+            </div>
+            <div class="card">
+                <h3>持续迭代的轻站点</h3>
+                <p>内容会随移动生态变化而更新，不是一次性页面，你可以定期回来看新变化。</p>
+            </div>
+        </div>
+
+        <!-- 说明区：从用户识别用途切入 -->
+        <div class="section-title">这个网站能帮你识别什么</div>
+        <div class="scene-text">
+            <p>你是不是也遇到过这种情况：打开一个网站，划了半天还是没搞懂它到底提供什么 —— 是工具、资讯、社区还是别的？</p>
+            <p><strong>开云</strong> 的设计出发点很直接：第一屏就把用途说清楚。每一页都围绕一个明确的移动端相关主题展开，不带多余的跳转或隐藏入口。</p>
+            <p>如果你需要快速判断一个站点是否值得细看，或者想了解移动端使用方面的新思路，可以试着把 <a href="https://webmobile-ky.com" style="color: #1e1e1e; border-bottom: 1px solid #b0b0aa; text-decoration: none;">开云</a> 当作一个观察样本 —— 它本身就在实践“用途一目了然”。</p>
+        </div>
+
+        <!-- FAQ 摘要（三条） -->
+        <div class="section-title">常见疑问 · 摘要</div>
+        <div class="faq-summary">
+            <div class="faq-item">
+                <div class="q">这个网站适合哪些人？</div>
+                <div class="a">适合对移动端体验、信息呈现方式感兴趣的用户，也适合想找轻量参考的普通浏览者。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">内容更新频率如何？</div>
+                <div class="a">不定期更新，每次只增加或调整一个明确的主题，不追求频繁推送。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">我能在手机上正常浏览吗？</div>
+                <div class="a">完全可以，本页就是为移动设备优先设计的，字体、间距和交互区域都做了适配。</div>
+            </div>
+        </div>
+
+        <!-- 底部链接 -->
+        <div class="footer-links">
+            <span>想直接体验？前往 <a href="https://webmobile-ky.com">开云</a> · 当前介绍页仅供示意</span>
+        </div>
+
+    </div>
+</body>
+</html>
